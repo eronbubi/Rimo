@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'none'">
+  <title>Rimo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand drag">
+        <div class="logo"><img src="../build/icon.png" alt=""></div>
+        <div>
+          <div class="brand-name">Rimo</div>
+          <div class="brand-sub">Lokale KI</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <button data-view="discover" class="nav-item"><span data-icon="compass"></span>Entdecken</button>
+        <button data-view="models" class="nav-item"><span data-icon="box"></span>Meine Modelle<span class="nav-badge" id="dl-badge" hidden></span></button>
+        <button data-view="chat" class="nav-item"><span data-icon="chat"></span>Chat</button>
+        <button data-view="settings" class="nav-item"><span data-icon="sliders"></span>Einstellungen</button>
+      </nav>
+      <div class="side-foot">
+        <div class="hw" id="hw"></div>
+        <div class="status" id="ollama-status"><span class="dot"></span><span>Prüfe Ollama …</span></div>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar drag"><div class="top-title" id="top-title"></div></div>
+      <div class="view" id="view"></div>
+    </main>
+  </div>
+  <div class="toasts" id="toasts"></div>
+  <div class="modal-back" id="modal" hidden></div>
+  <div class="drawer-back" id="drawer" hidden></div>
+  <script src="markdown.js"></script>
+  <script src="icons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

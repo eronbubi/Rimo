@@ -1,0 +1,19 @@
+{
+  "name": "rimo",
+  "productName": "Rimo",
+  "version": "1.0.0",
+  "description": "Download any GGUF model from Hugging Face and chat with it locally through Ollama",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "app": "electron .",
+    "shot": "electron tools/shot.js",
+    "test": "node --test test/*.test.js",
+    "icon": "node tools/make-icon.js",
+    "dist": "node tools/make-icon.js && electron-packager . Rimo --platform=win32 --arch=x64 --out=dist --overwrite --icon=build/icon.ico --ignore=\"^/(dist|tools|test)($|/)\""
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.6",
+    "electron": "^33.2.0"
+  }
+}
